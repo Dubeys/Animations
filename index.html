@@ -27,10 +27,13 @@
 			<!--<div class="scroll">-->
 			
 				<div class="compet">
-					<h2 class="title">
-					LCS-EU	
-					<a href="#sRankings" class="ranking_button">Ranking ></a>
-					</h2>
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
 
 					<div class="scores_teams">
 						<div class="underlayer_score">
@@ -101,6 +104,7 @@
 
 	<script>
 	var rank = document.getElementsByClassName('title')[0],
+		ranking = document.getElementsByClassName('pRanking')[0],
 		back = document.getElementsByClassName('back')[0],
 		left=new Array(5),
 		right=new Array(5),
@@ -114,6 +118,8 @@
 
 	rank.addEventListener("click", function() {
 		
+		ranking.classList.remove("animRanking");
+
 		for (var i = 0; i <= 3; i++) {
 
 			left[i].classList.add("staticL");
@@ -122,12 +128,15 @@
 			left[i].classList.remove("match");
 			right[i].classList.remove("match");
 			score[i].classList.remove("scores_teams");
+			
 
 		};
 
 	});
 
 	back.addEventListener("click", function() {
+		
+			ranking.classList.add("animRanking");
 		
 		for (var i = 0; i <= 3; i++) {
 
@@ -144,7 +153,6 @@
 			left[i].classList.add("left");
 			right[i].classList.add("right");
 			score[i].classList.add("scores_teams");
-
 
 		};
 

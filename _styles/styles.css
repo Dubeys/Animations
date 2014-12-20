@@ -87,7 +87,7 @@ button{
 
 .match {
 	-webkit-transform-origin: top center;
-	-webkit-transform: scaleY(1);
+	-webkit-transform: scaleY(0);
 }
 
 .left {
@@ -211,12 +211,29 @@ button{
 	z-index: 2;
 
 	left: 100%;
+
+}
+
+.animRanking {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #263238; 
+
+	color: white;
+	text-align: center;
+	line-height: 480px;
+
+	z-index: 2;
+
+	left: 100%;
+
+	 -webkit-animation: aReturn 1s ease-in 1 both normal;
 }
 
 
 .pRanking:target {
-	
-	-webkit-animation: aRankings 1000ms 0.4s ease-in 1 forwards;
+	 -webkit-animation: aRankings 1000ms .4s ease-in 1 forwards normal;
 }
 
 @-webkit-keyframes aRanks {
@@ -257,6 +274,25 @@ button{
 	}
 
 	100% {
+		-webkit-transform: translateX(-100%);
+	}
+
+}
+
+@-webkit-keyframes aReturn {
+
+	100% {
+		-webkit-transform: translateX(0px);
+	}
+	55% {
+		box-shadow: 5px 0px 40px 0px rgba(0,0,0,0.7);
+	}
+
+	1% {
+		-webkit-transform: translateX(-100%);
+	}
+
+	0% {
 		-webkit-transform: translateX(-100%);
 	}
 
