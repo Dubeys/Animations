@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		
+		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-status-barstyle"
+			content="default">
+		<title>E-sport</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="_styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="_styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="_styles/animation.css">
+		<link rel="apple-touch-icon-precomposed"
+			href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-startup-image"í°
+			href="apple-touch-startup-image.png">	
+	
+	</head>
+	
+	<body>
+	
+	<!--____________________________________________SCORELIVE!-->
+		<section id="sScores" class="anim1">
+			
+			<!--<div class="scroll">-->
+			
+				<div class="compet">
+					<h2 class="title">
+					LCS-EU	
+					<a href="#sRankings" class="ranking_button">Ranking ></a>
+					</h2>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+					
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+
+				</div>
+
+		</section>
+	<!--_________________________________________________________-->
+	
+	<section class="pRanking" id="sRankings">
+		
+		RANKINGS
+		
+		<a href="#sScores">
+			<button class="back">back</button>
+		</a>
+
+	</section>
+
+	<script>
+	var rank = document.getElementsByClassName('title')[0],
+		back = document.getElementsByClassName('back')[0],
+		left=new Array(5),
+		right=new Array(5),
+		score=new Array(5);
+		
+	for (var i = 0; i <= 4; i++) {
+		left[i] =document.getElementsByClassName('match left')[i],
+		right[i] = document.getElementsByClassName('match right')[i],
+		score[i] = document.getElementsByClassName('scores_teams')[i];
+	};
+
+	rank.addEventListener("click", function() {
+		
+		for (var i = 0; i <= 3; i++) {
+
+			left[i].classList.add("staticL");
+			right[i].classList.add("staticR");
+			score[i].classList.add("staticS");
+			left[i].classList.remove("match");
+			right[i].classList.remove("match");
+			score[i].classList.remove("scores_teams");
+
+		};
+
+	});
+
+	back.addEventListener("click", function() {
+		
+		for (var i = 0; i <= 3; i++) {
+
+			left[i].classList.remove("staticL");
+			right[i].classList.remove("staticR");
+			score[i].classList.remove("staticS");
+			left[i].classList.add("match");
+			right[i].classList.add("match");
+			score[i].classList.add("scores_teams");
+
+			left[i].classList.remove("left");
+			right[i].classList.remove("right");
+			score[i].classList.remove("scores_teams");
+			left[i].classList.add("left");
+			right[i].classList.add("right");
+			score[i].classList.add("scores_teams");
+
+
+		};
+
+	});
+
+	</script>
+
+	</body>
+	
+</html>

@@ -1,0 +1,90 @@
+.title:hover > .ranking_button {
+
+	-webkit-animation: aRanks 1000ms ease-in 1 forwards;
+	z-index: 3;
+} 
+
+.anim1:target .scores_teams > .match.left {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s  ;
+}
+
+.anim1:target .scores_teams + .scores_teams > .match.left {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s ;
+}
+
+.anim1:target .scores_teams + .scores_teams + .scores_teams > .match.left {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s;
+}
+
+.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.left {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s ;
+}
+
+.anim1:target .scores_teams > .match.right {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s ;
+}
+
+.anim1:target .scores_teams + .scores_teams > .match.right {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s ;
+}
+
+.anim1:target .scores_teams + .scores_teams + .scores_teams > .match.right {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s;
+}
+
+.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.right {
+	margin: 0; 
+	/*-webkit-transform: scaleY(1);*/
+	-webkit-transition: .3s ease-out .8s ;
+}
+
+.anim1:target .scores_teams {
+	-webkit-transform: scaleY(1);
+	-webkit-transition: .3s ease-out .0s;
+}
+
+.anim1:target .scores_teams + .scores_teams {
+	-webkit-transform: scaleY(1);
+	-webkit-transition: .3s ease-out .2s;
+}
+
+.anim1:target .scores_teams + .scores_teams + .scores_teams{
+	-webkit-transform: scaleY(1);
+	-webkit-transition: .3s ease-out .4s;
+}
+
+.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams{
+	-webkit-transform: scaleY(1);
+	-webkit-transition: .3s ease-out .6s;
+}
+
+@-webkit-keyframe another {
+
+	0%{
+		-webkit-transform: scaleY(0);
+	}
+
+	50% {
+		margin-top: 40px; 
+		-webkit-transform: scaleY(1);	
+	}
+
+	100% {
+		margin: 0; 
+	}
+
+}
