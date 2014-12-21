@@ -9,37 +9,8 @@
 	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
-.anim1:target .scores_teams + .scores_teams > .match.left {
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another 1.3s linear 1 forwards .0s;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams > .match.left {
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another 1.3s linear 1 forwards .0s;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.left {
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another 1.3s linear 1 forwards .0s;
-}
-
 .anim1:target .scores_teams > .match.right {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another 1.3s linear 1 forwards .0s;
-}
-
-.anim1:target .scores_teams + .scores_teams > .match.right {
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another 1.3s linear 1 forwards .0s;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams > .match.right {
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another 1.3s linear 1 forwards .0s;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.right {
 	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
