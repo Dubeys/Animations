@@ -231,7 +231,7 @@ button{
 
 	left: 100%;
 
-	 -webkit-animation: aReturn .8s ease-in 1 both normal;
+	 -webkit-animation: aReturn .8s cubic-bezier(.71,0,.9,.66) 1 both normal;
 }
 
 
