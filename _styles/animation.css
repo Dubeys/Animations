@@ -6,42 +6,41 @@
 
 .anim1:target .scores_teams > .match.left {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams + .scores_teams > .match.left {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams + .scores_teams + .scores_teams > .match.left {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.left {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams > .match.right {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams + .scores_teams > .match.right {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams + .scores_teams + .scores_teams > .match.right {
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.right {
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-animation: another .6s ease-out 1 forwards .6s;
+	-webkit-animation: another 1.3s linear 1 forwards .0s;
 }
 
 .anim1:target .scores_teams {
@@ -63,17 +62,33 @@
 @-webkit-keyframes another {
 
 	0%{
-		-webkit-transform: scaleY(0);
+		opacity: 0;
+		-webkit-transform: translateY(24px);
+	}		
+
+	59%{
+		opacity: 0;
 	}
 
-	50% {
-		margin-top: 40px; 
-		-webkit-transform: scaleY(1);	
+	60%{
+		opacity: 1;
+		-webkit-transform: translateY(24px);
+	}
+
+	70% {
+		-webkit-transform: translateY(-19px);
+	}
+
+	78% {
+		-webkit-transform: translateY(-14px);	
+	}
+
+	88% {
+		-webkit-transform: translateY(-17px);	
 	}
 
 	100% {
-		margin: 0; 
-		-webkit-transform: scaleY(1);
+		-webkit-transform: translateY(-16px);	
 	}
 
 }
