@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="_styles/animation.css">
 		<link rel="apple-touch-icon-precomposed"
 			href="apple-touch-icon-precomposed.png">
-		<link rel="apple-touch-startup-image"í°
+		<link rel="apple-touch-startup-image"
 			href="apple-touch-startup-image.png">	
 	
 	</head>
@@ -27,10 +27,13 @@
 			<!--<div class="scroll">-->
 			
 				<div class="compet">
-					<h2 class="title">
-					LCS-EU	
-					<a href="#sRankings" class="ranking_button">Ranking ></a>
-					</h2>
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
 
 					<div class="scores_teams">
 						<div class="underlayer_score">
@@ -48,19 +51,56 @@
 					<div class="scores_teams">
 						<div class="underlayer_score">
 						
-							0  -  1
+							2  -  3
 
 							<img src="_data/fleche.png" class="down_arrow">
 
 						</div>
 
-						<p class="match left">Fnatic</p>
-						<p class="match right">LDLC</p>
+						<p class="match left">Feyu</p>
+						<p class="match right">KATNA</p>
 					</div>
 					
 					<div class="scores_teams">
 						<div class="underlayer_score">
 						
+							0  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">SK Telecom</p>
+						<p class="match right">RAVC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">NINJA</p>
+						<p class="match right">BloodRV</p>
+					</div>
+
+				</div>
+
+				<div class="compet">
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
 							0  -  1
 
 							<img src="_data/fleche.png" class="down_arrow">
@@ -74,6 +114,56 @@
 					<div class="scores_teams">
 						<div class="underlayer_score">
 						
+							2  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Feyu</p>
+						<p class="match right">KATNA</p>
+					</div>
+					
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">SK Telecom</p>
+						<p class="match right">RAVC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">NINJA</p>
+						<p class="match right">BloodRV</p>
+					</div>
+
+				</div>
+
+				<div class="compet">
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
 							0  -  1
 
 							<img src="_data/fleche.png" class="down_arrow">
@@ -82,6 +172,45 @@
 
 						<p class="match left">Fnatic</p>
 						<p class="match right">LDLC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Feyu</p>
+						<p class="match right">KATNA</p>
+					</div>
+					
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">SK Telecom</p>
+						<p class="match right">RAVC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">NINJA</p>
+						<p class="match right">BloodRV</p>
 					</div>
 
 				</div>
@@ -100,36 +229,48 @@
 	</section>
 
 	<script>
-	var rank = document.getElementsByClassName('title')[0],
+	var rank = new Array(13),
+		ranking = document.getElementsByClassName('pRanking')[0],
 		back = document.getElementsByClassName('back')[0],
-		left=new Array(5),
-		right=new Array(5),
-		score=new Array(5);
+		left=new Array(13),
+		right=new Array(13),
+		score=new Array(13);
 		
-	for (var i = 0; i <= 4; i++) {
+	for (var i = 0; i <= 12; i++) {
 		left[i] =document.getElementsByClassName('match left')[i],
 		right[i] = document.getElementsByClassName('match right')[i],
 		score[i] = document.getElementsByClassName('scores_teams')[i];
+	
 	};
 
-	rank.addEventListener("click", function() {
-		
-		for (var i = 0; i <= 3; i++) {
+	for (var i = 0; i <= 4; i++) {
+		rank[i] = document.getElementsByClassName('title')[i],
+	
+		rank[i].addEventListener("click", function() {
+			
+			ranking.classList.remove("animRanking");
 
-			left[i].classList.add("staticL");
-			right[i].classList.add("staticR");
-			score[i].classList.add("staticS");
-			left[i].classList.remove("match");
-			right[i].classList.remove("match");
-			score[i].classList.remove("scores_teams");
+			for (var i = 0; i <= 11; i++) {
 
-		};
+				left[i].classList.add("staticL");
+				right[i].classList.add("staticR");
+				score[i].classList.add("staticS");
+				left[i].classList.remove("match");
+				right[i].classList.remove("match");
+				score[i].classList.remove("scores_teams");
+				
 
-	});
+			};
+
+		});
+
+	};
 
 	back.addEventListener("click", function() {
 		
-		for (var i = 0; i <= 3; i++) {
+			ranking.classList.add("animRanking");
+
+		for (var i = 0; i <= 11; i++) {
 
 			left[i].classList.remove("staticL");
 			right[i].classList.remove("staticR");
@@ -144,7 +285,6 @@
 			left[i].classList.add("left");
 			right[i].classList.add("right");
 			score[i].classList.add("scores_teams");
-
 
 		};
 

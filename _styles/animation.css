@@ -5,86 +5,73 @@
 } 
 
 .anim1:target .scores_teams > .match.left {
-	margin: 0; 
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s  ;
-}
-
-.anim1:target .scores_teams + .scores_teams > .match.left {
-	margin: 0; 
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s ;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams > .match.left {
-	margin: 0; 
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.left {
-	margin: 0; 
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s ;
+	-webkit-animation: another 1.3s cubic-bezier(0,.01,0,1.01) 1 forwards .0s;
 }
 
 .anim1:target .scores_teams > .match.right {
-	margin: 0; 
 	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s ;
-}
-
-.anim1:target .scores_teams + .scores_teams > .match.right {
-	margin: 0; 
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s ;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams > .match.right {
-	margin: 0; 
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s;
-}
-
-.anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams > .match.right {
-	margin: 0; 
-	/*-webkit-transform: scaleY(1);*/
-	-webkit-transition: .3s ease-out .8s ;
+	-webkit-animation: another 1.3s cubic-bezier(0,.01,0,1.01) 1 forwards .0s;
 }
 
 .anim1:target .scores_teams {
-	-webkit-transform: scaleY(1);
-	-webkit-transition: .3s ease-out .0s;
+	-webkit-animation: aScores .3s ease-out 1 forwards ;
 }
 
 .anim1:target .scores_teams + .scores_teams {
-	-webkit-transform: scaleY(1);
-	-webkit-transition: .3s ease-out .2s;
+	-webkit-animation: aScores .3s ease-out 1 forwards .2s;
 }
 
 .anim1:target .scores_teams + .scores_teams + .scores_teams{
-	-webkit-transform: scaleY(1);
-	-webkit-transition: .3s ease-out .4s;
+	-webkit-animation: aScores .3s ease-out 1 forwards .4s;
 }
 
 .anim1:target .scores_teams + .scores_teams + .scores_teams + .scores_teams{
-	-webkit-transform: scaleY(1);
-	-webkit-transition: .3s ease-out .6s;
+	-webkit-animation: aScores .3s ease-out 1 forwards .5s;
 }
 
-@-webkit-keyframe another {
+@-webkit-keyframes another {
 
 	0%{
-		-webkit-transform: scaleY(0);
+		opacity: 0;
+		-webkit-transform: translateY(24px);
+	}		
+
+	59%{
+		opacity: 0;
 	}
 
-	50% {
-		margin-top: 40px; 
-		-webkit-transform: scaleY(1);	
+	60%{
+		opacity: 1;
+		-webkit-transform: translateY(24px);
+	}
+
+	70% {
+		-webkit-transform: translateY(-19px);
+	}
+
+	78% {
+		-webkit-transform: translateY(-14px);	
+	}
+
+	88% {
+		-webkit-transform: translateY(-17px);	
 	}
 
 	100% {
-		margin: 0; 
+		-webkit-transform: translateY(-16px);	
+	}
+
+}
+
+@-webkit-keyframes aScores {
+
+	0% {
+		-webkit-transform: scaleY(0);
+	}
+
+	100% {
+		-webkit-transform: scaleY(1);
 	}
 
 }
