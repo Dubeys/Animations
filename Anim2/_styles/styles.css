@@ -1,0 +1,159 @@
+body, html {
+	-webkit-text-size-adjust: 100%; /* prevents text size from changing on orientation change */
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+a {
+	text-decoration: none;
+}
+
+button{
+	line-height: 10px;
+}
+
+.anim2 {
+	position: fixed;
+	background-color: #263238; 
+	width:100%;
+	height:3000px;
+	z-index: 1;
+}
+
+/*.scroll {
+	position: absolute;
+	width: 100%;
+	height: 2000px;
+}*/
+
+.compet {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.title {
+	margin: 0px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #EF6C00;
+	color: #F5F5F5;
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+	z-index: 3;
+}
+
+.ranking_button {
+	position: absolute;
+
+	background: #EF6C00;
+
+	margin: 0;
+	top: 0;
+	padding-right: 10px;
+	right: 0;
+	width: 100px;
+	height: 40px;
+	border: 0px 0px 0px 1px white solid;
+
+	font-size: 11pt;
+	font-weight: 200;
+	color: #F0F0F0;
+
+	z-index: 0;
+}
+
+.scores_teams {
+	width: 100%;
+	height: 40px;
+	top:0;
+	z-index: -1;
+	-webkit-transform: scaleY(1);
+}
+
+.down_arrow {
+	width: 12.25px;
+	height:6.25px;
+
+	position: absolute;
+
+	margin: 25px 0px 0px 0px;
+	left: 153.75px;
+}
+
+.left {
+	position: absolute;
+	background: #03A9F4;
+	
+	margin: 0;
+	padding-right: 10px;
+	
+	width: 115px;
+	height: 30px;
+
+	text-align: right;
+	line-height: 30px;
+	color: #F0F0F0;
+
+	border-radius: 0px 0px 2px 0px;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
+	z-index: -1;
+
+	-webkit-transform-origin: top center;
+	-webkit-transform: scaleY(1);
+	
+}
+
+.right {
+	position: absolute;
+	background: #03A9F4;
+
+	margin: 0;
+	padding-left: 10px;
+
+	width: 115px;
+	height: 30px;
+	right: 0px;
+
+	text-align: left;
+	line-height: 30px;
+	color: #F0F0F0;
+
+	border-radius: 0px 0px 0px 2px;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
+	z-index: -1;
+
+	-webkit-transform-origin: top center;
+	-webkit-transform: scaleY(1);
+}
+
+.underlayer_score {
+	position: absolute;
+	width: 100%;
+	height: 37px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14pt;
+	background-color: #ECEFF1; 
+	color: rgba(0,0,0,0.6);
+	z-index: -1;
+
+}
+
+.popout{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14pt;
+	background-color: #ECEFF1; 
+	color: rgba(0,0,0,0.6);
+	z-index: -1;
+}
+
+.popScore{
+	width: 100%;
+	height: 480px;
+	z-index: 4;
+}

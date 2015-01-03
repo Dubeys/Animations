@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		
+		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-status-barstyle"
+			content="default">
+		<title>E-sport</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="_styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="_styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="_styles/animation.css">
+		<link rel="apple-touch-icon-precomposed"
+			href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-startup-image"
+			href="apple-touch-startup-image.png">	
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	</head>
+	
+	<body>
+	
+	<!--____________________________________________SCORELIVE!-->
+		<section id="sScores" class="anim2">
+			
+			<!--<div class="scroll">-->
+			
+				<div class="compet">
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Feyu</p>
+						<p class="match right">KATNA</p>
+					</div>
+					
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">SK Telecom</p>
+						<p class="match right">RAVC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">NINJA</p>
+						<p class="match right">BloodRV</p>
+					</div>
+
+				</div>
+
+				<div class="compet">
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Feyu</p>
+						<p class="match right">KATNA</p>
+					</div>
+					
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">SK Telecom</p>
+						<p class="match right">RAVC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">NINJA</p>
+						<p class="match right">BloodRV</p>
+					</div>
+
+				</div>
+
+				<div class="compet">
+					
+					<a href="#sRankings" class="title">
+						<h2 class="title">
+						LCS-EU	
+						<p class="ranking_button">Ranking >
+						</h2>
+					</a>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Fnatic</p>
+						<p class="match right">LDLC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">Feyu</p>
+						<p class="match right">KATNA</p>
+					</div>
+					
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							0  -  3
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">SK Telecom</p>
+						<p class="match right">RAVC</p>
+					</div>
+
+					<div class="scores_teams">
+						<div class="underlayer_score">
+						
+							2  -  1
+
+							<img src="_data/fleche.png" class="down_arrow">
+
+						</div>
+
+						<p class="match left">NINJA</p>
+						<p class="match right">BloodRV</p>
+					</div>
+
+				</div>
+
+		</section>
+
+	<script>
+
+		var under = document.getElementsByClassName('underlayer_score'),
+			score = document.getElementsByClassName('scores_teams');
+
+		var position = getPosition(score[1]);
+
+		function getPosition(element) {
+		    var xPosition = 0;
+		    var yPosition = 0;
+		  
+		    while(element) {
+		        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+		        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+		        element = element.offsetParent;
+		    }
+		    return { x: xPosition, y: yPosition };
+		}
+
+		under[1].addEventListener("click", function () {
+
+			score[1].setAttribute("style","-webkit-transform: translateY(-" + position.y + "px); -webkit-transition: .5s ease-in-out .01s;");
+
+			under[1].classList.add("popout");
+			score[1].classList.add("popScore");
+
+			under[1].classList.remove("underlayer_score");
+			score[1].classList.remove("scores_teams");
+
+		});
+
+	</script>
+
+	</body>
+	
+</html>
