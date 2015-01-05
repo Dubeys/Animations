@@ -23,10 +23,10 @@
 	
 	<body>
 	
+	<div class="container">
+
 	<!--____________________________________________SCORELIVE!-->
 		<section id="sScores" class="anim2">
-			
-			<!--<div class="scroll">-->
 			
 				<div class="compet">
 					
@@ -218,13 +218,23 @@
 				</div>
 
 		</section>
+		
+	</div>
 
 	<script>
 
-		var under = document.getElementsByClassName('underlayer_score'),
-			score = document.getElementsByClassName('scores_teams');
+		var under = new Array(10);
+			score = new Array(10);
+			position = new Array(10);
 
-		var position = getPosition(score[1]);
+		var counter = 1;
+
+		for(var i = 0; i <= 8; i++){
+
+			under[i] = document.getElementsByClassName('underlayer_score')[i];
+			score[i] = document.getElementsByClassName('scores_teams')[i];
+
+		}
 
 		function getPosition(element) {
 		    var xPosition = 0;
@@ -238,17 +248,55 @@
 		    return { x: xPosition, y: yPosition };
 		}
 
-		under[1].addEventListener("click", function () {
 
-			score[1].setAttribute("style","-webkit-transform: translateY(-" + position.y + "px); -webkit-transition: .5s ease-in-out .01s;");
+		for(var i = 0; i <= 8; i++){
 
-			under[1].classList.add("popout");
-			score[1].classList.add("popScore");
+			(function(i) {     
+			
+				position[i] = getPosition(score[i]);
+				
 
-			under[1].classList.remove("underlayer_score");
-			score[1].classList.remove("scores_teams");
 
-		});
+				under[i].addEventListener("click", function(){
+
+					if (counter == 1) {
+
+			            score[i].setAttribute("style","-webkit-transform: translateY(-" + position[i].y + "px); -webkit-transition: .5s ease-in-out .01s;");
+
+			            under[i].removeAttribute("style");
+
+			            under[i].classList.add("popout");
+			            score[i].classList.add("popScore");
+
+			            under[i].classList.remove("underlayer_score");
+			            score[i].classList.remove("scores_teams");
+
+			       	}
+
+			       	if (counter == 2) {
+
+			       		counter = 0;
+
+			            score[i].removeAttribute("style");
+
+			            score[i].setAttribute("style","-webkit-transition: .5s ease-in-out .01s;");
+
+			            under[i].setAttribute("style","-webkit-transition: .7s ease-in-out .15s;");
+
+			            under[i].classList.remove("popout");
+			            score[i].classList.remove("popScore");
+
+			            under[i].classList.add("underlayer_score");
+			            score[i].classList.add("scores_teams");
+
+			       	}
+
+			       	counter++;
+				});
+
+			})(i);
+
+		}
 
 	</script>
 

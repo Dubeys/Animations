@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		
+		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-status-barstyle"
+			content="default">
+		<title>E-sport</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="_styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="_styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="_styles/animation.css">
+		<link rel="apple-touch-icon-precomposed"
+			href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-startup-image"
+			href="apple-touch-startup-image.png">	
+	
+	</head>
+	
+	<body>
+	
+	<div class="container">
+
+		<section class="team">
+			
+			<div class="teamOne">
+
+				<p class="fnatic">Fnatic</p>
+
+				<div class="something">
+					
+					<h1 class="content"> CONTENT </h1>
+
+				</div>
+
+
+			</div>
+
+		</section>
+
+	</div>
+
+	<script>
+
+		var team = document.getElementsByClassName("teamOne"),
+			content = document.getElementsByClassName("fnatic"),
+			para = document.getElementsByClassName("something");
+
+		team[0].addEventListener("click", function(){
+
+			team[0].classList.toggle("active"),
+			content[0].classList.toggle("activeCont"),
+			para[0].classList.toggle("activePara");
+
+		});
+
+	</script>
+
+	</body>
+	
+</html>

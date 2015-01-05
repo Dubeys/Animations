@@ -2,6 +2,14 @@ body, html {
 	-webkit-text-size-adjust: 100%; /* prevents text size from changing on orientation change */
 	width: 100%;
 	-webkit-overflow-scrolling: touch;
+	overflow: hidden;
+}
+
+.container {
+	width: 320px;
+	height: 480px;
+	margin-left: 50%;
+	-webkit-transform: translateX(-160px);
 }
 
 a {
@@ -19,12 +27,6 @@ button{
 	height:3000px;
 	z-index: 1;
 }
-
-/*.scroll {
-	position: absolute;
-	width: 100%;
-	height: 2000px;
-}*/
 
 .compet {
 	position: relative;

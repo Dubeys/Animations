@@ -1,0 +1,178 @@
+body, html {
+	-webkit-text-size-adjust: 100%; /* prevents text size from changing on orientation change */
+	-webkit-overflow-scrolling: touch;
+}
+
+.container {
+	width: 320px;
+	height: 480px;
+	margin-left: 50%;
+	overflow: hidden;
+	-webkit-transform: translateX(-160px);
+	-webkit-perspective: 300;
+}
+
+.liveAndPrevious {
+	position: fixed;
+	height: 480px;
+	width: 320px;
+	background: #ECEFF1;
+}
+
+.buttonPrev {
+	position: absolute;
+	bottom: 0px;
+	height: 30px;
+	width: 155px;
+	background: #ECEFF1;
+	text-align: center;
+	line-height: 30px;
+
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+
+	border-radius: 0px 5px 0px 0px;
+	-webkit-transition: .2s ease-in-out;
+}
+
+.activatePrev {
+	position: absolute;
+	bottom: 0px;
+	height: 30px;
+	width: 155px;
+	background: #ECEFF1;
+	text-align: center;
+	line-height: 30px;
+
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
+
+	border-radius: 0px 5px 0px 0px;
+	-webkit-transition: .2s ease-in-out;
+}
+
+.buttonLive {
+	position: absolute;
+	bottom: 0px;
+	left: 165px;
+	height: 30px;
+	width: 155px;
+	background: #ECEFF1;
+	text-align: center;
+	line-height: 30px;
+
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
+
+	border-radius: 5px 0px 0px 0px;
+	-webkit-transition: .2s ease-in-out;
+}
+
+.activateLive {
+	position: absolute;
+	bottom: 0px;
+	left: 165px;
+	height: 30px;
+	width: 155px;
+	background: #ECEFF1;
+	text-align: center;
+	line-height: 30px;
+
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+
+	border-radius: 5px 0px 0px 0px;
+	-webkit-transition: .2s ease-in-out;
+}
+
+.live {
+	position: absolute;
+	height: 480px;
+	width: 320px;
+	background: #03A9F4;
+	box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.5);
+	text-align: center;
+}
+
+.previous {
+	position: absolute;
+	height: 480px;
+	width: 320px;
+	background: #EF6C00;
+	box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.5);
+	text-align: center;
+	-webkit-transform: translateZ(-150px) translateX(420px);
+}
+
+.awayLive {
+	-webkit-animation: animation .5s 1 linear forwards;
+}
+
+.activeLive {
+	-webkit-transform: translateZ(-150px) translateX(420px);
+	-webkit-animation: animationReverseLive .5s 1 linear forwards .25s;
+}
+
+@-webkit-keyframes animation {
+
+	0%{
+		-webkit-transform: translateZ(0px) translateY(0px);
+	}
+
+	50%{
+		-webkit-transform: translateZ(-150px);
+	}
+
+	100%{
+		-webkit-transform: translateZ(-150px) translateX(420px);
+	}
+}
+
+@-webkit-keyframes animationReverseLive {
+
+	0%{
+		-webkit-transform: translateZ(-150px) translateX(420px);
+	}
+
+	50%{
+		-webkit-transform: translateZ(-150px);
+	}
+
+	100%{
+		-webkit-transform: translateZ(0px);
+	}
+}
+
+.activePrev {
+	-webkit-animation: animationReverse .5s 1 linear forwards 0.25s;
+}
+
+.awayPrev {
+	-webkit-animation: animationPrev .5s 1 linear forwards;
+}
+
+@-webkit-keyframes animationReverse {
+
+	0%{
+		-webkit-transform: translateZ(-150px) translateX(-420px);
+	}
+
+	50%{
+		-webkit-transform: translateZ(-150px);
+	}
+
+	100%{
+		-webkit-transform: translateZ(0px);
+	}
+}
+
+@-webkit-keyframes animationPrev {
+
+	0%{
+		-webkit-transform: translateZ(0px);
+	}
+
+	50%{
+		-webkit-transform: translateZ(-150px);
+	}
+
+	100%{
+		-webkit-transform: translateZ(-150px) translateX(-420px);
+	}
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		
+		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-status-barstyle"
+			content="default">
+		<title>E-sport</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="_styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="_styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="_styles/animation.css">
+		<link rel="apple-touch-icon-precomposed"
+			href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-startup-image"
+			href="apple-touch-startup-image.png">	
+	
+	</head>
+	
+	<body>
+	
+	<div class="container">
+		<section class="liveAndPrevious">
+			
+			<div class="live">
+				
+
+
+			</div>
+
+			<div class="previous">
+				
+
+
+			</div>
+
+			<div class="firstBut buttonPrev">PREVIOUS</div>
+			<div class="secondBut buttonLive">LIVE</div>
+
+		</section>
+
+	</div>
+	<script>
+
+		var live = document.getElementsByClassName("live"),
+			previous = document.getElementsByClassName("previous"),
+			buttonLive = document.getElementsByClassName("secondBut"),
+			buttonPrev = document.getElementsByClassName("firstBut");
+
+		buttonPrev[0].addEventListener("click", function(){
+
+			live[0].classList.remove("activeLive");
+			previous[0].classList.remove("awayPrev");
+
+			live[0].classList.add("awayLive");
+			previous[0].classList.add("activePrev");
+					
+			buttonPrev[0].classList.add("activatePrev")
+			buttonPrev[0].classList.remove("buttonPrev");
+
+			buttonLive[0].classList.add("activateLive");	
+			buttonLive[0].classList.remove("buttonLive");
+			
+
+		});
+
+		buttonLive[0].addEventListener("click", function(){
+
+			live[0].classList.remove("awayLive");
+			previous[0].classList.remove("activePrev");
+
+			live[0].classList.add("activeLive");
+			previous[0].classList.add("awayPrev");
+
+			buttonPrev[0].classList.add("buttonPrev");
+			buttonPrev[0].classList.remove("activatePrev");
+
+			buttonLive[0].classList.add("buttonLive");
+			buttonLive[0].classList.remove("activateLive");
+
+		});
+
+	</script>
+
+	</body>
+	
+</html>

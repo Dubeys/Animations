@@ -21,6 +21,8 @@
 	
 	<body>
 	
+	<div class="container">
+
 	<!--____________________________________________SCORELIVE!-->
 		<section id="sScores" class="anim1">
 			
@@ -228,8 +230,11 @@
 
 	</section>
 
+	</div>
+
 	<script>
 	var rank = new Array(13),
+		rankButton = new Array(13),
 		ranking = document.getElementsByClassName('pRanking')[0],
 		back = document.getElementsByClassName('back')[0],
 		left=new Array(13),
@@ -244,25 +249,25 @@
 	};
 
 	for (var i = 0; i <= 4; i++) {
-		rank[i] = document.getElementsByClassName('title')[i],
-	
-		rank[i].addEventListener("click", function() {
-			
-			ranking.classList.remove("animRanking");
+		rank[i] = document.getElementsByClassName('title')[i];
 
-			for (var i = 0; i <= 11; i++) {
-
-				left[i].classList.add("staticL");
-				right[i].classList.add("staticR");
-				score[i].classList.add("staticS");
-				left[i].classList.remove("match");
-				right[i].classList.remove("match");
-				score[i].classList.remove("scores_teams");
+			rank[i].addEventListener("click", function() {
 				
+				ranking.classList.remove("animRanking");
 
-			};
+				for (var e = 0; e <= 11; e++) {
 
-		});
+					left[e].classList.add("staticL");
+					right[e].classList.add("staticR");
+					score[e].classList.add("staticS");
+					left[e].classList.remove("match");
+					right[e].classList.remove("match");
+					score[e].classList.remove("scores_teams");
+					
+
+				};
+
+			});
 
 	};
 

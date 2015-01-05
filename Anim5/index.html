@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		
+		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-status-barstyle"
+			content="default">
+		<title>E-sport</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="_styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="_styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="_styles/animation.css">
+		<link rel="apple-touch-icon-precomposed"
+			href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-startup-image"
+			href="apple-touch-startup-image.png">	
+	
+	</head>
+	
+	<body>
+	
+	<div class="container">
+
+		<section class="search">
+			
+			<img src="_data/loupe.png" class="searchImg">
+
+			<div class="yolo searchBar">
+				
+				<div class="badass bar">Search</div>
+
+			</div>
+
+		</section>
+
+	</div>
+
+	<script>
+
+	var search = document.getElementsByClassName("searchImg"),
+		bar = document.getElementsByClassName("badass"),
+		searchBar = document.getElementsByClassName("yolo");
+
+
+		search[0].addEventListener("click", function(){
+
+			search[0].classList.add("active");
+			searchBar[0].classList.add("searchThis");
+			searchBar[0].classList.remove("searchBar");
+			bar[0].classList.remove("bar");
+			bar[0].classList.add("barThis");
+
+		});
+
+		searchBar[0].addEventListener("click", function(){
+
+			search[0].classList.remove("active");
+			searchBar[0].classList.remove("searchThis");
+			searchBar[0].classList.add("searchBar");
+			bar[0].classList.add("bar");
+			bar[0].classList.remove("barThis");
+
+		});
+
+	</script>
+
+	</body>
+	
+</html>
